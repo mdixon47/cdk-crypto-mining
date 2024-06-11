@@ -2,10 +2,10 @@
 import "source-map-support/register"
 import * as cdk from "aws-cdk-lib"
 import { CdkCryptoMiningStack } from "../lib/cdk-crypto-mining-stack"
-import { VpcStack } from "../lib/vpc-stack"
-import { StorageStack } from "../lib/storage-stack"
-import { LambdaStack } from "../lib/lambda-stack"
-import { EC2Stack } from "../lib/ec2-stack"
+import { VpcStack } from "../src/stacks/vpc-stack"
+import { StorageStack } from "../src/stacks/storage-stack"
+import { LambdaStack } from "../src/stacks/lambda-stack"
+import { EC2Stack } from "../src/stacks/ec2-stack"
 
 const app = new cdk.App()
 

@@ -1,9 +1,9 @@
 import * as cdk from "aws-cdk-lib"
 import { Construct } from "constructs"
-import { EC2Stack } from "./ec2-stack"
-import { LambdaStack } from "./lambda-stack"
-import { StorageStack } from "./storage-stack"
-import { VpcStack } from "./vpc-stack"
+import { EC2Stack } from "../src/stacks/ec2-stack"
+import { LambdaStack } from "../src/stacks/lambda-stack"
+import { StorageStack } from "../src/stacks/storage-stack"
+import { VpcStack } from "../src/stacks/vpc-stack"
 
 export class CdkCryptoMiningStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
