@@ -69,33 +69,6 @@ cdk-crypto-mining/
  - LambdaStack: Create an instance of LambdaStack and pass the S3 bucket from the StorageStack to it. This ensures the Lambda function can interact with the S3 bucket.
  - EC2Stack: Create an instance of EC2Stack and pass the VPC from the VpcStack to it. This ensures the EC2 instances are created within the specified VPC.
 
-- Step 1: Design Your Architecture
-
-    First, decide on your mining application. Different cryptocurrencies might require different mining software and configurations. Common choices include cgminer, bfgminer for Bitcoin, or ethminer for Ethereum.
-
-    This is a test version of the CryptoMiner architecture:
-
-
-- Step 2: Create a VPC
-
-    For security, deploy your mining operations within a VPC. You'll need to define subnets, an internet gateway, and route tables. This isolates your mining operations and allows you to control access more tightly.
-
-- Step 3: Set Up EC2 Instances
-
-    Choose an EC2 instance type optimized for the type of mining you plan to do. For GPU-intensive cryptocurrencies, consider using GPU instances like the p3 or g4 series. Your CloudFormation template or CDK script will need to specify the instance type, AMI, and the VPC subnet to deploy these instances into.
-
-- Step 4: Automate Mining Software Installation
-
-    Use EC2 user data to bootstrap your instances with the necessary mining software. Your CloudFormation template or CDK script can include a bash script that runs on instance launch, installing the mining software and configuring it to start mining to your wallet automatically.
-
-- Step 5: Monitoring and Scaling
-
-    Consider how you'll monitor your mining operation and whether you'll want to automatically scale up or down based on certain metrics, such as the profitability of mining or the AWS spot instance prices. AWS CloudWatch can monitor your instances, and you can use AWS Lambda in conjunction with CloudWatch alerts to automate scaling actions.
-
-- Step 6: Security and Cost Optimization
-
-    Ensure that your mining operation is secure by following AWS best practices for security groups, IAM roles, and encryption. You can also optimize costs by using spot instances for mining, which can be significantly cheaper than on-demand instances. 
-
 ## Using AWS CloudFormation
 
 AWS CloudFormation allows you to model your entire infrastructure in a text file template (YAML or JSON), which you can use to create, update, and delete your resources in a managed and predictable way.
