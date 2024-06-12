@@ -41,13 +41,31 @@ These resources offer a broad spectrum of information suitable for various level
 ## CDK Crypto Miner Project Solution
  Creating a cryptocurrency mining solution on AWS involves several steps, including setting up a virtual private cloud (VPC) for security, deploying compute instances optimized for mining, and configuring the necessary software. Using AWS CloudFormation and the AWS Cloud Development Kit (CDK), you can automate the deployment and management of your mining infrastructure. Here's an overview of how you might approach this:
 
+# Project Structure
+```
+cdk-crypto-mining/
+├── bin/
+│   └── crypto-mining.ts
+├── lib/
+│   ├── cdk-crypto-mining-stack.ts
+├── src/
+│   ├── storage-stack.ts
+│   ├── lambda-stack.ts
+│   └── ec2-stack.ts 
+|   └── vpc-stack.ts
+├── lambda/
+│   └── index.ts
+├── cdk.json
+├── package.json
+└── tsconfig.json
+```
+
 - Step 1: Design Your Architecture
 
     First, decide on your mining application. Different cryptocurrencies might require different mining software and configurations. Common choices include cgminer, bfgminer for Bitcoin, or ethminer for Ethereum.
 
     This is a test version of the CryptoMiner architecture:
 
-    ![CrytoMiner Archeture 1](/images/ArchectureCryptoMiner.png)
 
 - Step 2: Create a VPC
 
