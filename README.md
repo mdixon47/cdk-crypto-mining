@@ -41,7 +41,7 @@ These resources offer a broad spectrum of information suitable for various level
 ## CDK Crypto Miner Project Solution
  Creating a cryptocurrency mining solution on AWS involves several steps, including setting up a virtual private cloud (VPC) for security, deploying compute instances optimized for mining, and configuring the necessary software. Using AWS CloudFormation and the AWS Cloud Development Kit (CDK), you can automate the deployment and management of your mining infrastructure. Here's an overview of how you might approach this:
 
-# Project Structure
+## Project Structure
 ```
 cdk-crypto-mining/
 ├── bin/
@@ -59,6 +59,15 @@ cdk-crypto-mining/
 ├── package.json
 └── tsconfig.json
 ```
+
+## Project Explanation
+
+ - Import Statements: Import necessary modules and stacks from the AWS CDK library and your lib directory.
+ - App Initialization: Initialize a new CDK app.
+ - VpcStack: Create an instance of VpcStack and store it in a variable. This will create the VPC.
+ - StorageStack: Create an instance of StorageStack and store it in a variable. This will create the S3 bucket.
+ - LambdaStack: Create an instance of LambdaStack and pass the S3 bucket from the StorageStack to it. This ensures the Lambda function can interact with the S3 bucket.
+ - EC2Stack: Create an instance of EC2Stack and pass the VPC from the VpcStack to it. This ensures the EC2 instances are created within the specified VPC.
 
 - Step 1: Design Your Architecture
 
