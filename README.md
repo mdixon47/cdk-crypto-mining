@@ -1,4 +1,5 @@
-# Welcome to your CDK Cryto Miner Project 0.0
+# Welcome to your CDK Cryto Miner Project 0.1
+## Date 25 Aug 2024
 
 ## What is Crypto Miner?
 Crypto mining is the process through which transactions for various forms of cryptocurrency are verified and added to the blockchain digital ledger. Also known as cryptocoin mining, altcoin mining, or Bitcoin mining (for the most popular form of cryptocurrency, Bitcoin), the mining process involves compiling recent transactions into blocks and trying to solve a computationally difficult puzzle.
