@@ -98,5 +98,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 ## CDK Deploy Errors:
 
 ## Successful Deploy: June 12, 2024
+### Updated: August 25th 2024 
 
 ## Additional Information:
+This section would include any further relevant details or added to OneNote book
